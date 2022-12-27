@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import Navbar from "scenes/navbar";
+import MyCollegeAppWidget from "scenes/widgets/MyCollegeAppWidget";
+import CollegeAppsWidget from "scenes/widgets/CollegeAppsWidget";
 import UserWidget from "scenes/widgets/UserWidget";
 
 const ProfilePage = () => {
@@ -44,6 +46,9 @@ const ProfilePage = () => {
           flexBasis={isNonMobileScreens ? "42%" : undefined}
           mt={isNonMobileScreens ? undefined : "2rem"}
         >
+          <MyCollegeAppWidget picturePath={user.picturePath} />
+          <Box m="2rem 0" />
+          <CollegeAppsWidget userId={userId} isProfile />
         </Box>
       </Box>
     </Box>

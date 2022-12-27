@@ -4,6 +4,7 @@ const initialState = {
   mode: "light",
   user: null,
   token: null,
+  collegeApps: [],
 };
 
 export const authSlice = createSlice({
@@ -21,9 +22,26 @@ export const authSlice = createSlice({
       state.user = null;
       state.token = null;
     },
+    setFriends: (state, action) => {
+      if (state.user) {
+        state.user.friends = action.payload.friends;
+      } else {
+        console.error("user friends non-existent :(");
+      }
+    },
+    setCollegeApps: (state, action) => {
+      state.collegeApps = action.payload.collegeApps;
+    },
+    setCollegeApp: (state, action) => {
+      const updatedCollegeApps = state.collegeApps.map((collegeApp) => {
+        if (collegeApp._id === action.payload.collegeApp._id) return action.payload.collegeApp;
+        return collegeApp;
+      });
+      state.collegeApps = updatedCollegeApps;
+    },
   },
 });
 
-export const { setMode, setLogin, setLogout} =
+export const { setMode, setLogin, setLogout, setFriends, setCollegeApps, setCollegeApp } =
   authSlice.actions;
 export default authSlice.reducer;
