@@ -14,7 +14,14 @@ const collegeAppSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    description: String,
+    college: {
+      type: String,
+      default: "",
+    },
+    appStatus: {
+      type: String,
+       default: "",
+    }
   },
   { timestamps: true }
 );

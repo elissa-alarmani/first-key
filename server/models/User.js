@@ -14,6 +14,13 @@ const UserSchema = new mongoose.Schema(
       min: 2,
       max: 50,
     },
+    hsGradYear: {
+      type: String,
+      required: true,
+      min: 4,
+      max: 4,
+      default: "",
+    },
     email: {
       type: String,
       required: true,

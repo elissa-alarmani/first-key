@@ -22,13 +22,6 @@ export const authSlice = createSlice({
       state.user = null;
       state.token = null;
     },
-    setFriends: (state, action) => {
-      if (state.user) {
-        state.user.friends = action.payload.friends;
-      } else {
-        console.error("user friends non-existent :(");
-      }
-    },
     setCollegeApps: (state, action) => {
       state.collegeApps = action.payload.collegeApps;
     },
@@ -42,6 +35,6 @@ export const authSlice = createSlice({
   },
 });
 
-export const { setMode, setLogin, setLogout, setFriends, setCollegeApps, setCollegeApp } =
+export const { setMode, setLogin, setLogout, setCollegeApps, setCollegeApp } =
   authSlice.actions;
 export default authSlice.reducer;

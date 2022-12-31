@@ -19,6 +19,7 @@ import FlexBetween from "components/FlexBetween";
 const registerSchema = yup.object().shape({
   firstName: yup.string().required("required"),
   lastName: yup.string().required("required"),
+  hsGradYear: yup.string().required("required"),
   email: yup.string().email("invalid email").required("required"),
   password: yup.string().required("required"),
   picture: yup.string().required("required"),
@@ -32,6 +33,7 @@ const loginSchema = yup.object().shape({
 const initialValuesRegister = {
   firstName: "",
   lastName: "",
+  hsGradYear: "",
   email: "",
   password: "",
   picture: "",
@@ -148,6 +150,16 @@ const Form = () => {
                   helperText={touched.lastName && errors.lastName}
                   sx={{ gridColumn: "span 2" }}
                 />
+                                              <TextField
+              label="High School Graduation Year"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              value={values.hsGradYear}
+              name="hsGradYear"
+              error={Boolean(touched.hsGradYear) && Boolean(errors.hsGradYear)}
+              helperText={touched.hsGradYear && errors.hsGradYear}
+              sx={{ gridColumn: "span 4" }}
+            />
                 
                 <Box
                   gridColumn="span 4"
@@ -184,7 +196,6 @@ const Form = () => {
                 </Box>
               </>
             )}
-
             <TextField
               label="Email"
               onBlur={handleBlur}
