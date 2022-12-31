@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setCollegeApps } from "state";
 import CollegeAppWidget from "./CollegeAppWidget";
 
-const CollegeAppsWidget = ({userId}) => {
+const CollegeAppsWidget = ({userId, picturePath}) => {
   const dispatch = useDispatch();
   const collegeApps = useSelector((state) => state.collegeApps);
   const token = useSelector((state) => state.token);

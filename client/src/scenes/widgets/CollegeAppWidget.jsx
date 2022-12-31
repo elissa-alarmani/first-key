@@ -23,20 +23,36 @@ const CollegeAppWidget = ({
       statusLabel = "Deferred";
       break;
     case "Waitlisted":
-      labelColor = palette.primary.main;
+      labelColor = palette.neutral.orange;
       statusLabel = "Waitlisted";
       break;
     default:
       labelColor = palette.neutral.main;
-      statusLabel = "Pending";
+      statusLabel = "Applied";
   }
 
   return (
     <WidgetWrapper m="2rem 0">
-      <Typography variant="h6" color={palette.neutral.main}>
+      <Typography
+        variant="h6"
+        style={{
+          fontFamily: "Poppins",
+          fontSize: "1.25rem",
+          fontWeight: 500,
+          color: palette.neutral.main,
+        }}
+      >
         {college}
       </Typography>
-      <Typography variant="subtitle1" color={labelColor}>
+      <Typography
+        variant="subtitle1"
+        style={{
+          fontFamily: "Poppins",
+          fontSize: "1rem",
+          fontWeight: 400,
+          color: labelColor,
+        }}
+      >
         {statusLabel}
       </Typography>
     </WidgetWrapper>
@@ -44,4 +60,3 @@ const CollegeAppWidget = ({
 };
 
 export default CollegeAppWidget;
-

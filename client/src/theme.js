@@ -16,12 +16,12 @@ export const colorTokens = {
       1000: "#000000",
     },
     primary: {
-      50: "#FFAA00",
-      100: "#FFAA00",
-      200: "#FFAA00",
-      300: "#FFAA00",
-      400: "#FFAA00",
-      500: "#FFAA00", // Header "First Key"
+      50: "#37CAEC",
+      100: "#37CAEC",
+      200: "#37CAEC",
+      300: "#37CAEC",
+      400: "#37CAEC",
+      500: "#37CAEC", // Header "First Key"
       600: "#00A0BC",
       700: "#006B7D",
       800: "#00353F",
@@ -67,6 +67,7 @@ export const colorTokens = {
                 mediumMain: colorTokens.grey[400],
                 medium: colorTokens.grey[300],
                 light: colorTokens.grey[50],
+                orange: colorTokens.grey[101],
               },
               background: {
                 default: colorTokens.grey[10],
