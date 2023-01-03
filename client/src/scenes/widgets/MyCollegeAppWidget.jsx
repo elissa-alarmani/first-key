@@ -51,48 +51,6 @@ const MyCollegeAppWidget = ({ picturePath }) => {
     setAppStatus("");
   };
 
-  // const handleCollegeApp = async () => {
-  //   // Check if the application already exists in the database
-  //   const response = await fetch(`http://localhost:3001/collegeApps`, {
-  //     headers: { Authorization: `Bearer ${token}` },
-  //   });
-  //   const existingApps = await response.json();
-  
-  //   // If the application already exists, update it
-  //   if (existingApps.length > 0) {
-  //     const formData = new FormData();
-  //     formData.append("appStatus", appStatus);
-  
-  //     await fetch(`http://localhost:3001/collegeApps/${existingApps[0]._id}`, {
-  //       method: "PUT",
-  //       headers: { Authorization: `Bearer ${token}` },
-  //       body: formData,
-  //     });
-  //   }
-  //   // If the application does not exist, create it
-  //   else {
-  //     const formData = new FormData();
-  //     formData.append("userId", _id);
-  //     formData.append("college", college);
-  //     formData.append("appStatus", appStatus);
-  
-  //     await fetch(`http://localhost:3001/collegeApps`, {
-  //       method: "POST",
-  //       headers: { Authorization: `Bearer ${token}` },
-  //       body: formData,
-  //     });
-  //   }
-  
-  //   // Update the collegeApps state and reset the form
-  //   const updatedResponse = await fetch(`http://localhost:3001/collegeApps`, {
-  //     headers: { Authorization: `Bearer ${token}` },
-  //   });
-  //   const collegeApps = await updatedResponse.json();
-  //   dispatch(setCollegeApps({ collegeApps }));
-  //   setCollege("");
-  //   setAppStatus("");
-  // };
-  
 
   let colleges = require("./finalColleges.json");
 

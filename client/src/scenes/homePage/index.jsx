@@ -4,6 +4,8 @@ import Navbar from "scenes/navbar";
 import UserWidget from "scenes/widgets/UserWidget";
 import MyCollegeAppWidget from "scenes/widgets/MyCollegeAppWidget";
 import CollegeAppsWidget from "scenes/widgets/CollegeAppsWidget";
+import InstructionsWidget from "scenes/widgets/InstructionsWidget";
+import { Divider } from "@mui/material";
 
 const HomePage = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
@@ -21,6 +23,8 @@ const HomePage = () => {
       >
         <Box flexBasis={isNonMobileScreens ? "26%" : undefined}>
           <UserWidget userId={_id} picturePath={picturePath} />
+          <Divider />
+          <InstructionsWidget />
         </Box>
         <Box
           flexBasis={isNonMobileScreens ? "42%" : undefined}

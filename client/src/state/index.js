@@ -7,6 +7,19 @@ const initialState = {
   collegeApps: [],
 };
 
+export const deleteCollegeAppFromState = (id) => {
+  return {
+    type: "DELETE_COLLEGE_APP",
+    payload: id,
+  };
+};
+
+// reducer function
+const deleteCollegeApp = (state, action) => {
+  const updatedCollegeApps = state.collegeApps.filter((collegeApp) => collegeApp._id !== action.payload);
+  state.collegeApps = updatedCollegeApps;
+};
+
 export const authSlice = createSlice({
   name: "auth",
   initialState,
@@ -32,8 +45,11 @@ export const authSlice = createSlice({
       });
       state.collegeApps = updatedCollegeApps;
     },
+    deleteCollegeApp,
   },
 });
+
+
 
 export const { setMode, setLogin, setLogout, setCollegeApps, setCollegeApp } =
   authSlice.actions;

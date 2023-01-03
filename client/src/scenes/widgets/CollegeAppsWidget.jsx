@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setCollegeApps } from "state";
 import CollegeAppWidget from "./CollegeAppWidget";
 
-const CollegeAppsWidget = ({userId, picturePath}) => {
+const CollegeAppsWidget = ({userId }) => {
   const dispatch = useDispatch();
   const collegeApps = useSelector((state) => state.collegeApps);
   const token = useSelector((state) => state.token);
@@ -17,8 +17,12 @@ const CollegeAppsWidget = ({userId, picturePath}) => {
       }
     );
     const data = await response.json();
+    console.log(token);
+    console.log(userId);
     dispatch(setCollegeApps({ collegeApps: data }));
   };
+
+  
 
 
   useEffect(() => {
