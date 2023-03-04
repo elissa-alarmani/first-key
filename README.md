@@ -6,7 +6,7 @@ First Key is a web application designed for first generation high school student
 
 ## Live Application URL
 
-The Application is deployed in https://elissa-alarmani.github.io/first-key
+The Application will be deployed in https://elissa-alarmani.github.io/first-key
 
 Click on the link to see the application
 
