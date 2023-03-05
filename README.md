@@ -4,6 +4,14 @@
 
 First Key is a web application designed for first generation high school students applying to college. 
 
+Desktop View:
+
+<img src="DesktopView.png" alt="Desktop View" width="1000">
+
+Mobile View:
+
+<img src="MobileView.png" alt="Mobile View" width="600">
+
 ## Live Application URL
 
 The Application will be deployed in https://elissa-alarmani.github.io/first-key
