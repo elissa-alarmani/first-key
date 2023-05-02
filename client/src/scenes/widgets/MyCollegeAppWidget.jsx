@@ -7,7 +7,7 @@ import {
 } from "@mui/material";
 import FlexBetween from "components/FlexBetween";
 import WidgetWrapper from "components/WidgetWrapper";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setCollegeApps } from "state";
 import FormControl from "@mui/material/FormControl";
